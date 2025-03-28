@@ -10,19 +10,41 @@ public class LoginPage extends AbstractPage {
 
     public static final Logger log = Logger.getLogger(LoginPage.class);
 
-    @FindBy(xpath = "//*[@id=\"user-name\"]")
+    @FindBy(id = "user-name")
     private ExtendedWebElement usernameInput;
 
-    @FindBy(xpath = "//*[@id=\"password\"]")
+    @FindBy(id = "password")
     private ExtendedWebElement passwordInput;
 
-    @FindBy(xpath = "//*[@id=\"login-button\"]")
+    @FindBy(id = "login-button")
     private ExtendedWebElement loginButton;
 
-    @FindBy(xpath = "//*[@id=\"login_button_container\"]/div/form/div[3]/h3")
+    @FindBy(css = "//*[@id=\"login_button_container\"]/div/form/div[3]/h3")
     private ExtendedWebElement errorMessage;
 
     public LoginPage(WebDriver driver) {
         super(driver);
     }
+
+
+    private void typeUsername(String username) {
+        usernameInput.type(username);
+        log.info("entered username");
+    }
+    private void typePassword(String password) {
+        passwordInput.type(password);
+        log.info("entered password");
+    }
+    private void clickLoginButton() {
+        loginButton.click();
+        log.info("clicked login button");
+    }
+
+    public void login(String username, String password) {
+        typeUsername(username);
+        typePassword(password);
+        clickLoginButton();
+    }
+
+
 }
