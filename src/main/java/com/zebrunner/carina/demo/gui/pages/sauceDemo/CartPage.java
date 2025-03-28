@@ -36,34 +36,13 @@ public class CartPage extends AbstractPage {
         super(driver);
     }
 
-    public boolean isCartDisplayed() {
-        return cartButton.isElementPresent();
-    }
-
     public boolean isItemInCart(String itemName) {
         return cartItems.stream().anyMatch(item -> item.getText().contains(itemName));
     }
 
-    public int getCartItemCount() {
-        return cartItems.size();
-    }
 
     public void clickCheckoutButton() {
         log.info("Checkout button clicked");
         checkoutButton.click();
-    }
-
-
-    public void removeFirstItem() {
-        if (!removeButtons.isEmpty()) {
-            log.info("Removing first item from cart");
-            removeButtons.get(0).click();
-        }
-    }
-
-    public CheckoutPage proceedToCheckout() {
-        log.info("Proceeding to checkout");
-        checkoutButton.click();
-        return new CheckoutPage(getDriver());
     }
 }

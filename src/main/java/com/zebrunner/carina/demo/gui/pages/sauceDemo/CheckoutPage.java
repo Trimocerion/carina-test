@@ -57,12 +57,6 @@ public class CheckoutPage extends AbstractPage {
         postalCodeField.type(postalCode);
     }
 
-    public void removeCheckoutDetails() {
-        log.info("Removing checkout details");
-        firstNameField.clear();
-        lastNameField.clear();
-        postalCodeField.clear();
-    }
 
     public void removeProductFromCart(String productName) {
         log.info("Attempting to remove product from cart: " + productName);
@@ -98,11 +92,6 @@ public class CheckoutPage extends AbstractPage {
     public void completeCheckout() {
         log.info("Completing checkout process");
         finishButton.click();
-    }
-
-    public void cancelCheckout() {
-        log.info("Cancelling checkout process");
-        cancelButton.click();
     }
 
     public String getCheckoutCompleteMessage() {

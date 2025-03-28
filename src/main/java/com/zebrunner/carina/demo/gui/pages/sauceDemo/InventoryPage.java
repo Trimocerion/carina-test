@@ -90,12 +90,4 @@ public class InventoryPage extends AbstractPage {
         return select.getOptions().stream().map(WebElement::getText).collect(Collectors.toList());
     }
 
-
-    public void sortItemsBy(int index) {
-        log.info("Sorting items by index: " + index);
-
-
-
-
-    }
 }
