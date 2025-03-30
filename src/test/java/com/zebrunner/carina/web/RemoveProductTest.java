@@ -5,6 +5,7 @@ import com.zebrunner.carina.demo.gui.pages.sauceDemo.CheckoutPage;
 import com.zebrunner.carina.demo.gui.pages.sauceDemo.InventoryPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.log4testng.Logger;
 

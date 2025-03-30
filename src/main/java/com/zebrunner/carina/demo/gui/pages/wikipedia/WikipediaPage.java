@@ -8,18 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class WikipediaPage extends AbstractPage {
 
-    @Localized
-    @FindBy()
-    private ExtendedWebElement title;
-
-
-
     public WikipediaPage(WebDriver driver) {
         super(driver);
     }
-
-    public ExtendedWebElement getTitleName() {
-        return title;
-    }
-
 }

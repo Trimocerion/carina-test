@@ -9,9 +9,9 @@ import org.testng.log4testng.Logger;
 
 import java.util.Locale;
 
-public class LocaleTest implements IAbstractTest {
+public class LocaleURLTest implements IAbstractTest {
 
-    private static final Logger log = Logger.getLogger(LocaleTest.class);
+    private static final Logger log = Logger.getLogger(LocaleURLTest.class);
     WebDriver driver = getDriver();
 
 
@@ -23,13 +23,14 @@ public class LocaleTest implements IAbstractTest {
 
         driver.get(url);
 
-        String expectedTitle = locale.getDisplayLanguage(locale) + " – Wikipedia";
-        String actualTitle = driver.getTitle();
+        String expectedURL = "https://" + locale.getLanguage() + ".wikipedia.org/";
+        String actualURL = driver.getCurrentUrl();
 
-        log.info("Expected title: " + expectedTitle);
-        log.info("Actual title: " + actualTitle);
+        log.info("Expected url: " + expectedURL);
+        log.info("Actual url: " + actualURL);
+        log.info(locale.getLanguage());
 
-        Assert.assertTrue(actualTitle.contains(locale.getDisplayLanguage(locale)),
+        Assert.assertTrue(actualURL.contains(locale.getLanguage()),
                 "Wrong Wikipedia page loaded for language: " + locale.getLanguage());
 
         log.info("Test passed for locale: " + locale.getLanguage());
