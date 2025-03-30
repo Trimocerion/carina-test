@@ -4,7 +4,7 @@ import com.zebrunner.carina.demo.gui.pages.sauceDemo.InventoryPage;
 import com.zebrunner.carina.demo.gui.pages.sauceDemo.LoginPage;
 import org.openqa.selenium.WebDriver;
 
-public class LoginUtilities {
+public class LoginUtils {
     public static void login(WebDriver driver, String username, String password){
         System.out.println("Logging in with username: " + username + " and password: " + password);
         LoginPage loginPage = new LoginPage(driver);

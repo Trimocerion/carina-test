@@ -6,8 +6,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.log4testng.Logger;
 
-import static com.zebrunner.carina.demo.gui.utils.LoginUtilities.login;
-import static com.zebrunner.carina.demo.gui.utils.LoginUtilities.logout;
+import static com.zebrunner.carina.demo.gui.utils.LoginUtils.login;
+import static com.zebrunner.carina.demo.gui.utils.LoginUtils.logout;
 
 public class LogoutTest implements IAbstractTest {
 

@@ -9,7 +9,7 @@ import org.testng.log4testng.Logger;
 
 import java.util.List;
 
-import static com.zebrunner.carina.demo.gui.utils.LoginUtilities.login;
+import static com.zebrunner.carina.demo.gui.utils.LoginUtils.login;
 
 public class SortItemsTest implements IAbstractTest {
 
