@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.log4testng.Logger;
-import static com.zebrunner.carina.demo.gui.utils.LoginUtilities.login;
+import static com.zebrunner.carina.demo.gui.utils.LoginUtils.login;
 
 
 public class AddProductTest implements IAbstractTest {
